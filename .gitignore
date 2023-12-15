@@ -9,3 +9,6 @@ __debug*
 .idea/
 
 build
+
+.direnv/
+GeoLite2-Country.mmdb
