@@ -1,0 +1,17 @@
+{
+	# uncomment this to, well, debug
+	#debug
+	order coraza_waf first
+}
+
+# IP on which to listen
+http://127.0.0.1:8080 {
+	coraza_waf {
+		directives `
+		SecRule REMOTE_ADDR "@geoLookup" "chain,id:22,drop,msg:'Non-BE IP address'"
+		SecRule GEO:COUNTRY_CODE "!@streq BE"
+		`
+	}
+    # destination of the reverse proxy
+	reverse_proxy http://127.0.0.1:3000
+}
