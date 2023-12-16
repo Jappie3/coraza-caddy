@@ -8,7 +8,7 @@
 
 OWASP Coraza WAF is 100% compatible with OWASP Coreruleset and Modsecurity syntax.
 
-This is a fork of [corazawaf/coraza-caddy](https://github.com/corazawaf/coraza-caddy) that includes the [GeoIP plugin](https://github.com/corazawaf/coraza-geoip). Create a `Caddyfile` in the root of this repository & run `go run caddy/main.go` to get started. Make sure to to also put a MaxMind GeoLite2 or any compatible database in the root of the repo & that `geo.RegisterGeoDatabaseFromFile` in `coraza.go` references the correct filename (default: `geodb.mmdb`).
+This is a fork of [corazawaf/coraza-caddy](https://github.com/corazawaf/coraza-caddy) that includes the [GeoIP plugin](https://github.com/corazawaf/coraza-geoip). Create a `Caddyfile` in the root of this repository & run `go run caddy/main.go` to get started. Make sure to to also put a [MaxMind GeoLite2](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data) or any compatible database in the root of the repo & that `geo.RegisterGeoDatabaseFromFile` in `coraza.go` references the correct filename (default: `geodb.mmdb`).
 
 ## Getting started
 
