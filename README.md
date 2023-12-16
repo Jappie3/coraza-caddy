@@ -1,4 +1,4 @@
-# Coraza WAF Caddy Module
+# Coraza WAF Caddy Module w/ GeoIP plugin
 
 [![Tests](https://github.com/corazawaf/coraza-caddy/actions/workflows/tests.yml/badge.svg)](https://github.com/corazawaf/coraza-caddy/actions/workflows/tests.yml)
 <a href="https://pkg.go.dev/github.com/corazawaf/coraza-caddy" target="_blank"><img src="https://img.shields.io/badge/godoc-reference-blue.svg"></a>
@@ -7,6 +7,8 @@
 [OWASP Coraza](https://github.com/corazawaf/coraza) Caddy Module provides Web Application Firewall capabilities for Caddy.
 
 OWASP Coraza WAF is 100% compatible with OWASP Coreruleset and Modsecurity syntax.
+
+This is a fork of [corazawaf/coraza-caddy](https://github.com/corazawaf/coraza-caddy) that includes the [GeoIP plugin](https://github.com/corazawaf/coraza-geoip). Create a `Caddyfile` in the root of this repository & run `go run caddy/main.go` to get started. Make sure to to also put a MaxMind GeoLite2 or any compatible database in the root of the repo & that `geo.RegisterGeoDatabaseFromFile` in `coraza.go` references the correct filename (default: `geodb.mmdb`).
 
 ## Getting started
 
