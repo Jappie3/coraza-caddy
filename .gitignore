@@ -11,4 +11,4 @@ __debug*
 build
 
 .direnv/
-GeoLite2-Country.mmdb
+geodb.mmdb

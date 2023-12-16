@@ -26,7 +26,7 @@ import (
 
 func init() {
 	// docs are outdated, it's RegisterGeoDatabaseFromFile and not RegisterDatabaseFromFile
-	geo.RegisterGeoDatabaseFromFile("GeoLite2-Country.mmdb", "country")
+	geo.RegisterGeoDatabaseFromFile("geodb.mmdb", "country")
 	caddy.RegisterModule(corazaModule{})
 	httpcaddyfile.RegisterHandlerDirective("coraza_waf", parseCaddyfile)
 }
